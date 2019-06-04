@@ -1,22 +1,21 @@
-# gonna try a couple different strategies here and see if any of them work
-
-# function to reverse a string
+# Define function to reverse string
 def reverse_string(str):
     return str[::-1]
-
-# For testing use only
-#print(reverse_string("yavanna"))
 
 # Import regular expressions module
 import re
 
-# Input statement
+# Input text
 text_input = input("Input some text: ")
+
+# Remove non-alphabetic characters from string, then make it lowercase
 text_input = re.sub(r'[^A-Za-z]', '', text_input)
+text_input = text_input.lower()
+
+# Reverse the string
 text_reverse = reverse_string(text_input)
 
-# If statements
-
+# Check to see if the text is a palindrome!
 if text_input == text_reverse:
     print("This is a palindrome!")
 
