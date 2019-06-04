@@ -18,3 +18,6 @@ def reverse_string(str):
 
 #else:
 #    print("This is not a palindrome.")
+
+# I am not 100% sure how to use this
+#re.sub(r'[^A-Za-z]')
