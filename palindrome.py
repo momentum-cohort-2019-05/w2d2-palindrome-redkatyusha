@@ -1,4 +1,4 @@
-# gonna try a couple different strategies here and see if all of them work
+# gonna try a couple different strategies here and see if any of them work
 
 # function to reverse a string
 def reverse_string(str):
@@ -7,20 +7,18 @@ def reverse_string(str):
 # For testing use only
 #print(reverse_string("yavanna"))
 
-# Input statements
-#text_input = input("Input some text: ")
-#text_reverse = reverse_string(text_input)
+# Import regular expressions module
+import re
 
-# For testing use only
-#print(text_reverse)
+# Input statement
+text_input = input("Input some text: ")
+text_input = re.sub(r'[^A-Za-z]', '', text_input)
+text_reverse = reverse_string(text_input)
 
-# This if/else statement doesn't work with spacing/punctuation/case
+# If statements
 
-#if text_input == text_reverse:
-#    print("This is a palindrome!")
+if text_input == text_reverse:
+    print("This is a palindrome!")
 
-#else:
-#    print("This is not a palindrome.")
-
-# I am not 100% sure how to use this
-#re.sub(r'[^A-Za-z]')
+else:
+    print("This is not a palindrome.")
